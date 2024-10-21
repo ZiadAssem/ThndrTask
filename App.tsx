@@ -7,15 +7,14 @@ import { GetStocksUseCase } from './src/domain/usecases/get_stocks';
 import { StockRepository } from './src/data/repositories/stock_repository';
 
 const StockList = () => {
-    const remoteDataSource = new PolygonDataSource();
 
     useEffect(() => {
         const fetchStocks = async () => {
             try {
                 const stockRepository = new StockRepository()
                 const useCase = new GetStocksUseCase(stockRepository);
-                const stocks = await useCase.execute();
-                console.log('Fetched models:', stocks);
+                // const stocks = await useCase.execute();
+                // console.log('Fetched models:', stocks);
             } catch (error) {
                 console.error('Error:', (error as Error).message);
             }

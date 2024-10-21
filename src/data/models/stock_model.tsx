@@ -18,4 +18,21 @@ export class StockModel extends StockEntity {
             data.last_updated_utc
         );
     }
+    toEntity() :StockEntity {
+        return new StockEntity(
+            this.ticker,
+            this.name,
+            this.market,
+            this.locale,
+            this.primaryExchange,
+            this.type,
+            this.active,
+            this.currencyName,
+            this.cik,
+            this.compositeFigi,
+            this.shareClassFigi,
+            this.lastUpdatedUtc
+        );
+    }
+
 }

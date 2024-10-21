@@ -3,13 +3,18 @@ import axios from 'axios';
 import { StockModel } from '../models/stock_model';
 
 export class PolygonDataSource {
-    private apiUrl = `https://api.polygon.io/v3/reference/tickers?active=true&limit=100&apiKey=R1SfdCNP9hWRKSIA0ZpYMLz_vlK95kSv`
+    private apiKey = process.env.REACT_APP_API_KEY;
+    private apiBase = process.env.REACT_APP_API_BASE_URL;
+    private apiUrl = `${this.apiBase}${this.apiKey}`;
     async fetchStocks(): Promise<StockModel[]> {
         try {
+            console.log('Test');
+            console.log(this.apiUrl);
+
             const response = await axios.get(this.apiUrl, {
                 headers: {
-                    'Authorization': `Bearer R1SfdCNP9hWRKSIA0ZpYMLz_vlK95kSv`, // Correctly include your API key
-                    'Content-Type': 'application/json', // Include Content-Type if necessary
+                    'Authorization': `Bearer ${this.apiKey}`, 
+                    'Content-Type': 'application/json', 
                 },
             });
 

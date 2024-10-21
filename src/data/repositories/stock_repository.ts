@@ -3,6 +3,7 @@
 import { PolygonDataSource } from '../sources/polygon_data_source';
 import { StockEntity } from '../../domain/entities/stock_entity';
 import { StockRepositoryInterface } from '../../domain/repositories/stock_repository_interface';
+import { StockModel } from '../models/stock_model';
 
 export class StockRepository implements StockRepositoryInterface {
     private remoteDataSource: PolygonDataSource;
@@ -13,6 +14,8 @@ export class StockRepository implements StockRepositoryInterface {
 
     async getStocks(): Promise<StockEntity[]> {
         const stockModels = await this.remoteDataSource.fetchStocks();
-        return stockModels; 
+
+        return stockModels.map((model: StockModel) => model.toEntity());
+
     }
 }
