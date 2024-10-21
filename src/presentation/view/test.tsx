@@ -2,9 +2,9 @@
 
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { PolygonDataSource } from './src/data/sources/polygon_data_source';
-import { GetStocksUseCase } from './src/domain/usecases/get_stocks';
-import { StockRepository } from './src/data/repositories/stock_repository';
+import { PolygonDataSource } from '../../data/sources/polygon_data_source';
+import { GetStocksUseCase } from '../../domain/usecases/get_stocks';
+import { StockRepository } from '../../data/repositories/stock_repository';
 
 const StockList = () => {
     const remoteDataSource = new PolygonDataSource();
