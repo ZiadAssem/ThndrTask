@@ -16,16 +16,16 @@ const styles = StyleSheet.create({
     altText: {
         color: '#fff',
         fontSize: 12,
+        fontWeight: '300'
 
     },
     textBox: {
-        backgroundColor: '#1F1F1F',
+        backgroundColor: 'transparent',
         borderWidth: 1,
-        borderRadius: 5,
-        // create border color dark grey
-        borderColor: '#333',
+        borderRadius: 10,
+        borderColor: '#3b3b3b',
         padding: 10,
-        marginVertical: 10,         // Add margin for spacing
+        marginVertical: 10,      
 
     },
 });

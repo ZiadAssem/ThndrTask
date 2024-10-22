@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     margin: 10,
-    backgroundColor: '#1F1F1F',
+    backgroundColor: '#252739',
     borderRadius: 20,
     padding: 10,
   },
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   tickerText: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#fff',
   },
@@ -53,12 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     color: '#ccc',
   },
-  altText:
-  {
-    color: '#fff',
-    
-
-  }
+ 
 });
 
 export default StockItem;
