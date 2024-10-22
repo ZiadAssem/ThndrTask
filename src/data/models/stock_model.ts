@@ -16,6 +16,7 @@ export class StockModel extends StockEntity {
             data.composite_figi,
             data.share_class_figi,
             data.last_updated_utc
+            
         );
     }
     toEntity() :StockEntity {
